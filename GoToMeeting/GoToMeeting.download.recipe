@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest Google Chrome disk image.</string>
+    <string>Downloads latest GoToMeeting disk image.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.download.googlechrome</string>
+    <string>com.github.thenikola.download.GoToMeeting</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
