@@ -43,8 +43,7 @@ class GoToMeetingURLProvider(Processor):
 
     def get_g2m_url(self, base_url):
         jsonData = json.loads(urllib2.urlopen(base_url).read())
-        updateLink = jsonData['activeBuilds'][len(jsonData)]['macDownloadUrl']
-        return updateLink
+        return jsonData['activeBuilds'][len(jsonData)]['macDownloadUrl']
         
     def main(self):
         """Find and return a download URL"""

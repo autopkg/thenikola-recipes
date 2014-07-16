@@ -10,8 +10,6 @@
     <dict>
         <key>NAME</key>
         <string>GoToMeeting</string>
-        <key>DOWNLOAD_URL</key>
-        <string>https://builds.cdn.citrixonline.com/builds/g2m/1468/G2M_Mac_x86</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -27,7 +25,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
+                <string>%url%</string>
                 <key>filename</key>
                 <string>%NAME%.tar.gz</string>
             </dict>
