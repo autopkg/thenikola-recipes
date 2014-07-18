@@ -10,6 +10,8 @@
     <dict>
         <key>DOWNLOAD_URL</key>
         <string>http://builds.balsamiq.com/b/mockups-desktop/MockupsForDesktop.dmg</string>
+        <key>NAME</key>
+        <string>BalsamiqMockups</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -22,6 +24,9 @@
             <dict>
                 <key>url</key>
                 <string>%DOWNLOAD_URL%</string>
+                <key>filename</key>
+                <string>%NAME%.dmg</string>
+            </dict>
             </dict>
         </dict>
         <dict>
