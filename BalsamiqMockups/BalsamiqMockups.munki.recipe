@@ -24,7 +24,7 @@ with the advantage of the digital medium: drag and drop to resize and rearrange
 elements, make changes without starting over, and your work is clear enough 
 that you'll make sense of them later.</string>
             <key>display_name</key>
-            <string>Balsamic Mockups</string>
+            <string>Balsamiq Mockups</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
