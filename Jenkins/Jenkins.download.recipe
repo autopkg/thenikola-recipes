@@ -25,7 +25,7 @@
                 <key>url</key>
                 <string>%DOWNLOAD_URL%</string>
                 <key>download_dir</key>
-                <string>downloads/jenkins</string>
+                <string>%RECIPE_CACHE_DIR%/downloads/jenkins</string>
             </dict>
         </dict>
         <dict>
