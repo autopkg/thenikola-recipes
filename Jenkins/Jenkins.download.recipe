@@ -24,6 +24,8 @@
             <dict>
                 <key>url</key>
                 <string>%DOWNLOAD_URL%</string>
+                <key>download_dir</key>
+                <string>downloads/jenkins</string>
             </dict>
         </dict>
         <dict>
@@ -32,7 +34,7 @@
             <key>Arguments</key>
             <dict>
                 <key>dmg_root</key>
-                <string>%pathname%</string>
+                <string>%RECIPE_CACHE_DIR%/downloads</string>
                 <key>dmg_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%.dmg</string>
             </dict>
