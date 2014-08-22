@@ -9,7 +9,7 @@
     <key>Input</key>  
     <dict>
         <key>NAME</key>
-        <string>BalsamiqMockups</string>
+        <string>AxurePro</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>Web Development</string>
         <key>pkginfo</key>
