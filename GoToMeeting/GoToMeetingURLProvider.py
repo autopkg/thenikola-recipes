@@ -42,8 +42,11 @@ class GoToMeetingURLProvider(Processor):
     description = __doc__
 
     def get_g2m_url(self, base_url):
-        jsonData = json.loads(urllib2.urlopen(base_url).read())
-        return jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['macDownloadUrl']
+        try:
+        	jsonData = json.loads(urllib2.urlopen(base_url).read())
+        	return jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['macDownloadUrl']
+        except BaseException as err:
+			raise Exception("Can't read %s: %s" % (base_url, err))
         
     def main(self):
         """Find and return a download URL"""
