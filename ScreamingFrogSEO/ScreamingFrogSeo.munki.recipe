@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Screaming Frog Seo</string>
+        <string>ScreamingFrogSEO</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>SEO Tools</string>
         <key>pkginfo</key>
