@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_URL</key>
-        <string>http://builds.balsamiq.com/b/mockups-desktop/MockupsForDesktop.dmg</string>
+        <string>http://s3.amazonaws.com/build_production/mockups-desktop/MockupsForDesktop.dmg</string>
         <key>NAME</key>
         <string>BalsamiqMockups</string>
     </dict>
