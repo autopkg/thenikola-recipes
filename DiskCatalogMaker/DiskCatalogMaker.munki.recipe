@@ -30,6 +30,10 @@
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
+	        <key>category</key>
+			<string>Backup Software</string>
+			<key>developer</key>
+			<string>Fujiwara Software</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
