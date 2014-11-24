@@ -35,18 +35,18 @@
             <string>Unarchiver</string>
             <key>Arguments</key>
             <dict>
-				<key>purge_destination</key>
-				<string>true</string>
-           	</dict>
+                <key>purge_destination</key>
+                <string>true</string>
+            </dict>
         </dict>
         <dict>
             <key>Processor</key>
             <string>FileFinder</string>
-        	<key>Arguments</key>
-        	<dict>
-				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/*.app</string>
-           	 </dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pattern</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/*.app</string>
+            </dict>
         </dict>
         <dict>
             <key>Processor</key>

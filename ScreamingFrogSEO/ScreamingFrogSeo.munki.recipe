@@ -27,11 +27,11 @@
             <key>unattended_install</key>
             <true/>
             <key>minimum_os_version</key>
-	        <string>10.7.2</string>
-	        <key>category</key>
-			<string>SEO Tools</string>
-			<key>developer</key>
-			<string>Screaming Frog Ltd</string>
+            <string>10.7.2</string>
+            <key>category</key>
+            <string>SEO Tools</string>
+            <key>developer</key>
+            <string>Screaming Frog Ltd</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>

@@ -27,9 +27,9 @@
             <key>unattended_install</key>
             <true/>
             <key>category</key>
-			<string>Web Development</string>
-			<key>developer</key>
-			<string>Axure Software Solutions, Inc</string>
+            <string>Web Development</string>
+            <key>developer</key>
+            <string>Axure Software Solutions, Inc</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>

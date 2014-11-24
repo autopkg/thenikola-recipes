@@ -29,10 +29,10 @@ that you'll make sense of them later.</string>
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
-	        <key>category</key>
-			<string>Web Development</string>
-			<key>developer</key>
-			<string>Balsamiq Studios, LLC</string>
+            <key>category</key>
+            <string>Web Development</string>
+            <key>developer</key>
+            <string>Balsamiq Studios, LLC</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>

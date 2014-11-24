@@ -26,10 +26,10 @@
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
-	        <key>category</key>
-			<string>Webinar Software</string>
-			<key>developer</key>
-			<string>Citrix</string>
+            <key>category</key>
+            <string>Webinar Software</string>
+            <key>developer</key>
+            <string>Citrix</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>

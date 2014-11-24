@@ -28,11 +28,11 @@
             <key>unattended_install</key>
             <true/>
             <key>minimum_os_version</key>
-	        <string>10.7.2</string>
-	        <key>category</key>
-			<string>MunkiTools</string>
-			<key>developer</key>
-			<string>Timothy Sutton</string>
+            <string>10.7.2</string>
+            <key>category</key>
+            <string>MunkiTools</string>
+            <key>developer</key>
+            <string>Timothy Sutton</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
