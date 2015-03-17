@@ -8,8 +8,6 @@
     <string>com.github.thenikola.download.BalsamicMockups</string>
     <key>Input</key>
     <dict>
-        <key>DOWNLOAD_URL</key>
-        <string>https://s3.amazonaws.com/build_production/mockups-desktop/Balsamiq_Mockups_3.0.3.dmg</string>
         <key>NAME</key>
         <string>BalsamiqMockups</string>
     </dict>
@@ -19,11 +17,15 @@
     <array>
         <dict>
             <key>Processor</key>
+            <string>BalsamiqMockupsURLProvider</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
+                <string>%url%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
