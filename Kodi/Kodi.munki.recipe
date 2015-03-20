@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Amethyst and imports into Munki.</string>
+    <string>Downloads the current release version of Kodi and imports into Munki.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.munki.Amethyst</string>
+    <string>com.github.autopkg.munki.kodi</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Amethyst</string>
+        <string>Kodi</string>
         <key>MUNKI_REPO_SUBDIR</key>
         <string>apps</string>
         <key>pkginfo</key>
@@ -19,23 +19,23 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>Tiling window manager for OS X similar to xmonad, written in pure Objective-C.</string>
+            <string>Kodi is an award-winning free and open source (GPL) software media player and entertainment hub, featuring a 10-foot user interface for use with televisions and remote controls. It allows users to play and view most videos, music, podcasts, and other digital media files from local and network storage media and the internet.</string>
             <key>display_name</key>
-            <string>Amethyst</string>
+            <string>Kodi</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
             <true/>
             <key>category</key>
-            <string>Window Manager</string>
+            <string>Media Player</string>
             <key>developer</key>
-            <string>Ian Ynda-Hummel</string>
+            <string>Kodi Team</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
     <string>0.3.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.Amethyst</string>
+    <string>com.github.autopkg.download.kodi</string>
     <key>Process</key>
     <array>
         <dict>
