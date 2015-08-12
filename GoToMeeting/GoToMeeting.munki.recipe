@@ -30,6 +30,8 @@
             <string>Webinar Software</string>
             <key>developer</key>
             <string>Citrix</string>
+            <key>minimum_os_version</key>
+            <string>10.7</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
