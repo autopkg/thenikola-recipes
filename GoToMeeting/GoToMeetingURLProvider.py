@@ -31,13 +31,16 @@ class GoToMeetingURLProvider(Processor):
     input_variables = {
         "base_url": {
             "required": False,
-            "description": "Default is %s" % BASE_URL,
-        },
+            "description": "Default is %s" % BASE_URL
+        }
     }
     output_variables = {
         "url": {
-            "description": "URL to the latest GoToMeeting release.",
+            "description": "URL to the latest GoToMeeting release."
         },
+        "build": {
+            "description": "Build number of the latest GoToMeeting release."
+        }
     }
     description = __doc__
 
@@ -47,12 +50,21 @@ class GoToMeetingURLProvider(Processor):
         	return jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['macDownloadUrl']
         except BaseException as err:
 			raise Exception("Can't read %s: %s" % (base_url, err))
-        
+
+    def get_g2m_build(self, base_url):
+        try:
+        	jsonData = json.loads(urllib2.urlopen(base_url).read())
+        	return str(jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['buildNumber'])
+        except BaseException as err:
+			raise Exception("Can't read %s: %s" % (base_url, err))
+
     def main(self):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
         self.env["url"] = self.get_g2m_url(base_url)
         self.output("Found URL %s" % self.env["url"])
+        self.env["build"] = self.get_g2m_build(base_url)
+        self.output("Build number %s" % self.env["build"])
 
 if __name__ == "__main__":
     processor = GoToMeetingURLProvider()
