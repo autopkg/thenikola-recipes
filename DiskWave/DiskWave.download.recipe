@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>DiskWave</string>
         <key>SPARKLE_FEED_URL</key>
-        <string>http://diskwave.barthe.ph/sparkle/appcast_64bit.php</string>
+        <string>https://diskwave.barthe.ph/sparkle/appcast_64bit.php</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
