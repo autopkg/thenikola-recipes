@@ -23,7 +23,7 @@ from autopkglib import Processor, ProcessorError
 __all__ = ["BalsamiqMockupsURLProvider"]
 
 
-BASE_URL = "https://s3.amazonaws.com/build_production/mockups-desktop/version.jsonp"
+BASE_URL = "https://builds.balsamiq.com/mockups-desktop/version.jsonp"
 
 
 class BalsamiqMockupsURLProvider(Processor):
