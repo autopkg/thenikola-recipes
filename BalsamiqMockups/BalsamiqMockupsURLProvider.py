@@ -60,7 +60,7 @@ class BalsamiqMockupsURLProvider(Processor):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
         self.env["object"] = self.get_balsamiq_url(base_url)
-        self.env["url"] = "https://s3.amazonaws.com/build_production/mockups-desktop/Balsamiq_Mockups_"+self.env["object"]['version']+".dmg"
+        self.env["url"] = "https://builds.balsamiq.com/mockups-desktop/Balsamiq_Mockups_"+self.env["object"]['version']+".dmg"
         self.env["version"] = self.env["object"]['version']
         self.env["date"] = self.env["object"]['date']
         self.output("Found URL %s" % self.env["url"])
