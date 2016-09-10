@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>DOWNLOAD_URL</key>
-        <string>http://diskcatalogmaker.com/download/dmg/DiskCatalogMaker.dmg</string>
+        <string>https://diskcatalogmaker.com/download/dmg/DiskCatalogMaker.dmg</string>
         <key>NAME</key>
         <string>DiskCatalogMaker</string>
     </dict>
