@@ -2,55 +2,55 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Description</key>
-    <string>Downloads the latest Screaming Frog SEO disk image and imports into Munki.</string>
-    <key>Identifier</key>
-    <string>com.github.thenikola.munki.ScreamingFrogSEO</string>
-    <key>Input</key>
-    <dict>
-        <key>NAME</key>
-        <string>ScreamingFrogSEO</string>
-        <key>MUNKI_REPO_SUBDIR</key>
-        <string>SEO Tools</string>
-        <key>pkginfo</key>
-        <dict>
-            <key>catalogs</key>
-            <array>
-                <string>testing</string>
-            </array>
-            <key>description</key>
-            <string>The Screaming Frog SEO Spider is a small desktop program you can install locally on your PC, Mac or Linux machine which spiders websites’ links, images, CSS, script and apps from an SEO perspective. It fetches key onsite elements for SEO, presents them in tabs by type and allows you to filter for common SEO issues, or slice and dice the data how you see fit by exporting into Excel. You can view, analyse and filter the crawl data as it’s gathered and updated continuously in the program’s user interface.</string>
-            <key>display_name</key>
-            <string>Screaming Frog Seo</string>
-            <key>name</key>
-            <string>%NAME%</string>
-            <key>unattended_install</key>
-            <true/>
-            <key>minimum_os_version</key>
-            <string>10.7.2</string>
-            <key>category</key>
-            <string>SEO Tools</string>
-            <key>developer</key>
-            <string>Screaming Frog Ltd</string>
-        </dict>
-    </dict>
-    <key>MinimumVersion</key>
-    <string>0.2.0</string>
-    <key>ParentRecipe</key>
-    <string>com.github.thenikola.download.ScreamingFrogSEO</string>
-    <key>Process</key>
-    <array>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
-                <key>repo_subdirectory</key>
-                <string>%MUNKI_REPO_SUBDIR%</string>
-            </dict>
-            <key>Processor</key>
-            <string>MunkiImporter</string>
-        </dict>
-    </array>
+	<key>Description</key>
+	<string>Downloads the latest Screaming Frog SEO disk image and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>com.github.thenikola.munki.ScreamingFrogSEO</string>
+	<key>Input</key>
+	<dict>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>SEO Tools</string>
+		<key>NAME</key>
+		<string>ScreamingFrogSEO</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>testing</string>
+			</array>
+			<key>category</key>
+			<string>SEO Tools</string>
+			<key>description</key>
+			<string>The Screaming Frog SEO Spider is a small desktop program you can install locally on your PC, Mac or Linux machine which spiders websites’ links, images, CSS, script and apps from an SEO perspective. It fetches key onsite elements for SEO, presents them in tabs by type and allows you to filter for common SEO issues, or slice and dice the data how you see fit by exporting into Excel. You can view, analyse and filter the crawl data as it’s gathered and updated continuously in the program’s user interface.</string>
+			<key>developer</key>
+			<string>Screaming Frog Ltd</string>
+			<key>display_name</key>
+			<string>Screaming Frog Seo</string>
+			<key>minimum_os_version</key>
+			<string>10.7.2</string>
+			<key>name</key>
+			<string>%NAME%</string>
+			<key>unattended_install</key>
+			<true/>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.thenikola.download.ScreamingFrogSEO</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+			<key>Processor</key>
+			<string>MunkiImporter</string>
+		</dict>
+	</array>
 </dict>
 </plist>
