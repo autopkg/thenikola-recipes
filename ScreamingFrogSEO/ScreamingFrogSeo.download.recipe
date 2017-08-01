@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Screaming Frog SEO Spider</string>
 		<key>SEARCH_PATTERN</key>
-		<string>(?P&lt;url&gt;https://www.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-(?P&lt;version&gt;.*?).dmg)</string>
+		<string>(?P&lt;url&gt;https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-(?P&lt;version&gt;.*?).dmg)</string>
 		<key>SEARCH_URL</key>
 		<string>https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php</string>
 	</dict>
