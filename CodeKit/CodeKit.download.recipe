@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>CodeKit</string>
 		<key>SPARKLE_FEED_URL</key>
-		<string>https://incident57.com/codekit/appcast/ck2appcast.xml</string>
+		<string>https://codekitapp.com/api/3/appcast.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
