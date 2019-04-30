@@ -11,7 +11,7 @@
 		<key>DOWNLOAD_URL</key>
 		<string>https://axure.cachefly.net/AxureRP-Setup.dmg</string>
 		<key>MAJOR_VERSION</key>
-		<string>8</string>
+		<string>9</string>
 		<key>NAME</key>
 		<string>Axure RP %MAJOR_VERSION%</string>
 	</dict>
