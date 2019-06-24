@@ -65,7 +65,7 @@
 				<key>source</key>
 				<string>%found_filename%</string>
 				<key>target</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/CodeKit.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>FileMover</string>
