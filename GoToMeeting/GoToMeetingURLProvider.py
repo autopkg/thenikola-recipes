@@ -15,11 +15,10 @@
 # limitations under the License.
 
 from __future__ import absolute_import
-import re
-import urllib2, json
+import json
+import urllib2
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["GoToMeetingURLProvider"]
 
@@ -47,17 +46,17 @@ class GoToMeetingURLProvider(Processor):
 
     def get_g2m_url(self, base_url):
         try:
-        	jsonData = json.loads(urllib2.urlopen(base_url).read())
-        	return jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['macDownloadUrl']
+            jsonData = json.loads(urllib2.urlopen(base_url).read())
+            return jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['macDownloadUrl']
         except BaseException as err:
-			raise Exception("Can't read %s: %s" % (base_url, err))
+            raise Exception("Can't read %s: %s" % (base_url, err))
 
     def get_g2m_build(self, base_url):
         try:
-        	jsonData = json.loads(urllib2.urlopen(base_url).read())
-        	return str(jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['buildNumber'])
+            jsonData = json.loads(urllib2.urlopen(base_url).read())
+            return str(jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['buildNumber'])
         except BaseException as err:
-			raise Exception("Can't read %s: %s" % (base_url, err))
+            raise Exception("Can't read %s: %s" % (base_url, err))
 
     def main(self):
         """Find and return a download URL"""
