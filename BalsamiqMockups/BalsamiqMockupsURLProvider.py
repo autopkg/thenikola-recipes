@@ -16,9 +16,13 @@
 
 from __future__ import absolute_import
 import json
-import urllib2
 
 from autopkglib import Processor, ProcessorError
+
+try:
+    from urllib.parse import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["BalsamiqMockupsURLProvider"]
 
@@ -50,7 +54,7 @@ class BalsamiqMockupsURLProvider(Processor):
 
     def get_balsamiq_url(self, base_url):
         try:
-            url = urllib2.urlopen(base_url).read()
+            url = urlopen(base_url).read()
             return json.loads(url[len('jsoncallback('):-2])
 
         except BaseException as err:
