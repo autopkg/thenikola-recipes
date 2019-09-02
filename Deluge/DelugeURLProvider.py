@@ -55,7 +55,7 @@ class DelugeURLProvider(Processor):
         try:
             version = urlopen(version_url).read()
             page = urlopen(url).read()
-            links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
+            links = re.findall(r"<a.*?\s*href=\"(.*?)\".*?>", page)
             for link in links:
                 if version.rstrip('\n') in link:
                     url = link
