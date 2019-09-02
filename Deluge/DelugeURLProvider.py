@@ -63,7 +63,7 @@ class DelugeURLProvider(Processor):
             return BASE_URL+url
 
         except BaseException as err:
-        	raise Exception("Can't read %s: %s" % (base_url, err))
+            raise Exception("Can't read %s: %s" % (base_url, err))
 
     def main(self):
         """Find and return a download URL"""
