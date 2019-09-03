@@ -58,7 +58,7 @@ class BalsamiqMockupsURLProvider(Processor):
             url = urlopen(base_url).read()
             return json.loads(url[len('jsoncallback('):-2])
 
-        except BaseException as err:
+        except Exception as err:
             raise Exception("Can't read %s: %s" % (base_url, err))
 
     def main(self):

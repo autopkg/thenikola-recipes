@@ -62,7 +62,7 @@ class DelugeURLProvider(Processor):
                     break
             return BASE_URL+url
 
-        except BaseException as err:
+        except Exception as err:
             raise Exception("Can't read %s: %s" % (base_url, err))
 
     def main(self):

@@ -53,14 +53,14 @@ class GoToMeetingURLProvider(Processor):
         try:
             jsonData = json.loads(urlopen(base_url).read())
             return jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['macDownloadUrl']
-        except BaseException as err:
+        except Exception as err:
             raise Exception("Can't read %s: %s" % (base_url, err))
 
     def get_g2m_build(self, base_url):
         try:
             jsonData = json.loads(urlopen(base_url).read())
             return str(jsonData['activeBuilds'][len(jsonData['activeBuilds'])-1]['buildNumber'])
-        except BaseException as err:
+        except Exception as err:
             raise Exception("Can't read %s: %s" % (base_url, err))
 
     def main(self):
