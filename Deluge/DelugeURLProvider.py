@@ -14,10 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import absolute_import
+
 import re
-import urllib2
 
 from autopkglib import Processor, ProcessorError
+
+try:
+    from urllib.parse import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 
 __all__ = ["DelugeURLProvider"]
@@ -36,7 +42,7 @@ class DelugeURLProvider(Processor):
         "version_url": {
             "required": False,
             "description": "Default is %s" % VERSION_URL,
-        },        
+        },
     }
     output_variables = {
         "url": {
@@ -47,24 +53,24 @@ class DelugeURLProvider(Processor):
 
     def get_Deluge_url(self, url, version_url):
         try:
-            version = urllib2.urlopen(version_url).read()
-            page = urllib2.urlopen(url).read()
-            links = re.findall("<a.*?\s*href=\"(.*?)\".*?>", page)
+            version = urlopen(version_url).read()
+            page = urlopen(url).read()
+            links = re.findall(r"<a.*?\s*href=\"(.*?)\".*?>", page)
             for link in links:
                 if version.rstrip('\n') in link:
                     url = link
                     break
             return BASE_URL+url
 
-        except BaseException as err:
-        	raise Exception("Can't read %s: %s" % (base_url, err))
-        
+        except Exception as err:
+            raise Exception("Can't read %s: %s" % (base_url, err))
+
     def main(self):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
         version_url = self.env.get("version_url", VERSION_URL)
         self.env["url"] = self.get_Deluge_url(base_url, version_url)
-        
+
         self.output("Found URL %s" % self.env["url"])
 
 if __name__ == "__main__":

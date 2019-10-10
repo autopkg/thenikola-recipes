@@ -14,11 +14,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import re
-import urllib2, json
+from __future__ import absolute_import
+
+import json
 
 from autopkglib import Processor, ProcessorError
 
+try:
+    from urllib.parse import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["BalsamiqMockupsURLProvider"]
 
@@ -50,12 +55,12 @@ class BalsamiqMockupsURLProvider(Processor):
 
     def get_balsamiq_url(self, base_url):
         try:
-        	url = urllib2.urlopen(base_url).read()
-        	return json.loads( url[len('jsoncallback('):-2] )
-        	
-        except BaseException as err:
-			raise Exception("Can't read %s: %s" % (base_url, err))
-        
+            url = urlopen(base_url).read()
+            return json.loads(url[len('jsoncallback('):-2])
+
+        except Exception as err:
+            raise Exception("Can't read %s: %s" % (base_url, err))
+
     def main(self):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
@@ -67,5 +72,5 @@ class BalsamiqMockupsURLProvider(Processor):
 
 
 if __name__ == "__main__":
-	processor = BalsamiqMockupsURLProvider()
-	processor.execute_shell()
+    processor = BalsamiqMockupsURLProvider()
+    processor.execute_shell()
