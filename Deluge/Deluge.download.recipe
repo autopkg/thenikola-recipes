@@ -16,14 +16,23 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>re_pattern</key>
+				<string>href="deluge-([\d\.]+)-macosx-x64\.dmg"</string>
+				<key>result_output_var_name</key>
+				<string>version</string>
+				<key>url</key>
+				<string>http://download.deluge-torrent.org/mac_osx/?C=M;O=D</string>
+			</dict>
 			<key>Processor</key>
-			<string>DelugeURLProvider</string>
+			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>%url%</string>
+				<string>http://download.deluge-torrent.org/mac_osx/deluge-%version%-macosx-x64.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
