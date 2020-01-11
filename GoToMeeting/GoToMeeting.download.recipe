@@ -16,8 +16,17 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>warning_message</key>
+				<string>This family of GoToMeeting recipes is deprecated and will be removed. Please consider switching to these recipes instead: https://github.com/autopkg/homebysix-recipes/tree/master/GoToMeeting</string>
+			</dict>
 			<key>Processor</key>
-			<string>GoToMeetingURLProvider</string>
+			<string>DeprecationWarning</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>com.github.homebysix.download.GoToMeeting/GoToMeetingURLProvider</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
