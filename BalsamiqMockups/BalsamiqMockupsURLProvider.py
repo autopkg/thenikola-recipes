@@ -18,12 +18,7 @@ from __future__ import absolute_import
 
 import json
 
-from autopkglib import Processor, ProcessorError
-
-try:
-    from urllib.parse import urlopen  # For Python 3
-except ImportError:
-    from urllib2 import urlopen  # For Python 2
+from autopkglib import Processor, ProcessorError, URLGetter
 
 __all__ = ["BalsamiqMockupsURLProvider"]
 
@@ -31,32 +26,25 @@ __all__ = ["BalsamiqMockupsURLProvider"]
 BASE_URL = "https://builds.balsamiq.com/mockups-desktop/version.jsonp"
 
 
-class BalsamiqMockupsURLProvider(Processor):
-#class BalsamiqMockupsURLProvider():
-    """Provides a download URL for the latest GoToMeeting release."""
+class BalsamiqMockupsURLProvider(URLGetter):
+    # class BalsamiqMockupsURLProvider():
+    """Provides a download URL for the latest Balsamiq Mockups release."""
     input_variables = {
-        "base_url": {
-            "required": False,
-            "description": "Default is %s" % BASE_URL,
-        },
+        "base_url": {"required": False, "description": "Default is %s" % BASE_URL,},
     }
     output_variables = {
-        "url": {
-            "description": "URL to the latest Balsamiq Mockups release.",
-        },
+        "url": {"description": "URL to the latest Balsamiq Mockups release.",},
         "date": {
             "description": "Release date of the latest Balsamiq Mockups release.",
         },
-        "version": {
-            "description": "Version of the latest Balsamiq Mockups release.",
-        },
+        "version": {"description": "Version of the latest Balsamiq Mockups release.",},
     }
     description = __doc__
 
     def get_balsamiq_url(self, base_url):
         try:
-            url = urlopen(base_url).read()
-            return json.loads(url[len('jsoncallback('):-2])
+            url = self.download(base_url)
+            return json.loads(url[len("jsoncallback(") : -2])
 
         except Exception as err:
             raise Exception("Can't read %s: %s" % (base_url, err))
@@ -65,9 +53,12 @@ class BalsamiqMockupsURLProvider(Processor):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
         self.env["object"] = self.get_balsamiq_url(base_url)
-        self.env["url"] = "https://builds.balsamiq.com/mockups-desktop/Balsamiq_Mockups_"+self.env["object"]['version']+".dmg"
-        self.env["version"] = self.env["object"]['version']
-        self.env["date"] = self.env["object"]['date']
+        self.env["url"] = (
+            "https://builds.balsamiq.com/mockups-desktop/"
+            "Balsamiq_Mockups_%s.dmg" % self.env["object"]["version"]
+        )
+        self.env["version"] = self.env["object"]["version"]
+        self.env["date"] = self.env["object"]["date"]
         self.output("Found URL %s" % self.env["url"])
 
 
