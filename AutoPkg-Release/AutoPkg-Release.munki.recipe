@@ -38,7 +38,7 @@
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.rtrouton.download.AutoPkg-Release</string>
+	<string>com.github.autopkg.download.AutoPkg-Release</string>
 	<key>Process</key>
 	<array>
 		<dict>
