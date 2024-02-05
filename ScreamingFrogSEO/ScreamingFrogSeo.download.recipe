@@ -3,17 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest Screaming Frog SEO disk image.</string>
+	<string>Downloads latest Screaming Frog SEO disk image.
+
+To download Apple Silicon use: (https://download\.screamingfrog\.co\.uk/products/seo-spider/ScreamingFrogSEOSpider-([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)-aarch64\.dmg) in the SEARCH_PATTERN variable.
+
+To download Intel use: (https://download\.screamingfrog\.co\.uk/products/seo-spider/ScreamingFrogSEOSpider-([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)-x86_64\.dmg) in the SEARCH_PATTERN variable.
+	 </string>
 	<key>Identifier</key>
 	<string>com.github.thenikola.download.ScreamingFrogSEO</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Screaming Frog SEO Spider</string>
+		<string>ScreamingFrogSEOSpider</string>
 		<key>SEARCH_PATTERN</key>
-		<string>(?P&lt;url&gt;https://download.screamingfrog.co.uk/products/seo-spider/ScreamingFrogSEOSpider-(?P&lt;version&gt;.*?).dmg)</string>
+		<string>(https://download\.screamingfrog\.co\.uk/products/seo-spider/ScreamingFrogSEOSpider-([A-Za-z0-9]+(\.[A-Za-z0-9]+)+)-x86_64\.dmg)</string>
 		<key>SEARCH_URL</key>
-		<string>https://www.screamingfrog.co.uk/wp-content/themes/screamingfrog/inc/download-modal.php</string>
+		<string>https://www.screamingfrog.co.uk</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.1</string>
@@ -26,6 +31,8 @@
 				<string>%SEARCH_PATTERN%</string>
 				<key>url</key>
 				<string>%SEARCH_URL%</string>
+				<key>result_output_var_name</key>
+				<string>DOWNLOAD_URL</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
@@ -36,7 +43,7 @@
 				<key>filename</key>
 				<string>%NAME%.dmg</string>
 				<key>url</key>
-				<string>%url%</string>
+				<string>%DOWNLOAD_URL%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
