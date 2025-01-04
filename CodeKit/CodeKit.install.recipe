@@ -5,13 +5,13 @@
 	<key>Description</key>
 	<string>Downloads the current release version of CodeKit and installs it into applications.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.install.CodeKit</string>
+	<string>com.github.thenikola.install.CodeKit</string>
 	<key>Input</key>
 	<dict/>
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.CodeKit</string>
+	<string>com.github.thenikola.download.CodeKit</string>
 	<key>Process</key>
 	<array>
 		<dict>

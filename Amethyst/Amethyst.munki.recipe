@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Amethyst and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.munki.Amethyst</string>
+	<string>com.github.thenikola.munki.Amethyst</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>0.3.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.Amethyst</string>
+	<string>com.github.thenikola.download.Amethyst</string>
 	<key>Process</key>
 	<array>
 		<dict>
