@@ -49,6 +49,10 @@ To download Intel use: (https://download\.screamingfrog\.co\.uk/products/seo-spi
 			<string>URLDownloader</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
@@ -58,10 +62,6 @@ To download Intel use: (https://download\.screamingfrog\.co\.uk/products/seo-spi
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
-		</dict>
-		<dict>
-			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
 		</dict>
 	</array>
 </dict>
