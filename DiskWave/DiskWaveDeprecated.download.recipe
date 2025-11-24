@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Stub recipe for forwarding from old identifier to new identifier.</string>
+	<key>Identifier</key>
+	<string>com.github.autopkg.download.DiskWave</string>
+	<key>Input</key>
+	<dict/>
+	<key>MinimumVersion</key>
+	<string>0.3.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>DeprecationWarning</string>
+			<key>Arguments</key>
+			<dict>
+				<key>warning_message</key>
+				<string>This recipe's identifier has changed from 'com.github.autopkg.download.DiskWave' to 'com.github.thenikola.download.DiskWave'. Please update your child recipes and overrides accordingly.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

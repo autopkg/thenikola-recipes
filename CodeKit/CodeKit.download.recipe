@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of CodeKit.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.download.CodeKit</string>
+	<string>com.github.thenikola.download.CodeKit</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 		<string>https://codekitapp.com/api/3/appcast.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.3.1</string>
 	<key>Process</key>
 	<array>
 		<dict>

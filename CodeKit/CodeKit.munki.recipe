@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of CodeKit and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.munki.CodeKit</string>
+	<string>com.github.thenikola.munki.CodeKit</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -33,7 +33,7 @@
 	<key>MinimumVersion</key>
 	<string>0.3.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.CodeKit</string>
+	<string>com.github.thenikola.download.CodeKit</string>
 	<key>Process</key>
 	<array>
 		<dict>

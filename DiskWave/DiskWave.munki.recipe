@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of DiskWave and imports into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.munki.DiskWave</string>
+	<string>com.github.thenikola.munki.DiskWave</string>
 	<key>Input</key>
 	<dict>
 		<key>MUNKI_REPO_SUBDIR</key>
@@ -35,7 +35,7 @@
 	<key>MinimumVersion</key>
 	<string>0.3.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.DiskWave</string>
+	<string>com.github.thenikola.download.DiskWave</string>
 	<key>Process</key>
 	<array>
 		<dict>

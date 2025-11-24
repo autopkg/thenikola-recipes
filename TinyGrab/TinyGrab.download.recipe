@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of TinyGrab.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.download.TinyGrab</string>
+	<string>com.github.thenikola.download.TinyGrab</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 		<string>http://tinygrab.com/appcast/tinygrab-appcast.xml</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>1.1</string>
 	<key>Process</key>
 	<array>
 		<dict>

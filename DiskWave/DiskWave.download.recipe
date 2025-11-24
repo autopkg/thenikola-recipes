@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of DiskWave.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.download.DiskWave</string>
+	<string>com.github.thenikola.download.DiskWave</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -14,7 +14,7 @@
 		<string>https://diskwave.barthe.ph/sparkle/appcast_64bit.php</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.3.1</string>
 	<key>Process</key>
 	<array>
 		<dict>

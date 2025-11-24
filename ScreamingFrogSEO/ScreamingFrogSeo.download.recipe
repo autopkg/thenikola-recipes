@@ -21,7 +21,7 @@ To download Intel use: (https://download\.screamingfrog\.co\.uk/products/seo-spi
 		<string>https://www.screamingfrog.co.uk</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.1</string>
+	<string>0.3.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
