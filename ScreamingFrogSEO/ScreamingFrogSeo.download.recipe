@@ -26,7 +26,7 @@ Set ARCH to "aarch64" for Apple Silicon or "x86_64" for Intel (default).
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
-				<string>([0-9]+\.[0-9]+)</string>
+				<string>([0-9]+(.[0-9]+)+)</string>
 				<key>url</key>
 				<string>%VERSION_URL%</string>
 				<key>result_output_var_name</key>
